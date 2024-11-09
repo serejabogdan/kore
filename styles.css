@@ -26,6 +26,26 @@ html {
   z-index: -1;
 }
 
+/* Медіа-запит для адаптивного відображення */
+@media screen and (max-width: 768px) {
+  .background-video {
+    width: 1920px;
+    object-fit: contain;
+    transform: translate(-60%, -50%);
+  }
+
+  .overlay {
+    margin-top: 26px;
+  }
+}
+
+/* Додаткове налаштування для маленьких екранів */
+@media screen and (max-width: 480px) {
+  .background-video::after {
+    width: 80%;
+  }
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -89,4 +109,62 @@ html {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
+}
+
+/* Базові стилі для персонажа */
+.character-image {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 90vh;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+/* Медіа-запит для мобільних пристроїв */
+@media screen and (max-width: 768px) {
+  .character-image {
+    right: 50%;
+    transform: translate(50%, -50%);
+    height: 70vh;
+  }
+
+  .about-link-wrapper {
+    width: 90%;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 15px 0;
+  }
+
+  .about-link-wrapper > a {
+    font-size: 42px;
+  }
+
+  .logo {
+    width: 90%;
+    height: auto;
+  }
+
+  .social-buttons {
+    gap: 15px;
+  }
+
+  .social-buttons img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Додаткові стилі для дуже маленьких екранів */
+@media screen and (max-width: 480px) {
+  .character-image {
+    height: 60vh;
+  }
+
+  .about-link-wrapper > a {
+    font-size: 32px;
+  }
 }
