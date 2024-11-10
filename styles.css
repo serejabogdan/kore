@@ -26,7 +26,6 @@ html {
   z-index: -1;
 }
 
-/* Медіа-запит для адаптивного відображення */
 @media screen and (max-width: 768px) {
   .background-video {
     width: 1920px;
@@ -39,7 +38,6 @@ html {
   }
 }
 
-/* Додаткове налаштування для маленьких екранів */
 @media screen and (max-width: 480px) {
   .background-video::after {
     width: 80%;
@@ -65,7 +63,6 @@ html {
 }
 
 .social-buttons {
-  display: flex;
   gap: 26px;
 
   display: flex;
@@ -74,6 +71,8 @@ html {
 
 .social-buttons a {
   text-decoration: none;
+  display: flex;
+  flex-shrink: 0;
 }
 
 .about-link-wrapper {
@@ -97,21 +96,7 @@ html {
 .about-link-wrapper>a:hover {
   color: #cccccc;
   text-decoration: none;
-}
 
-.roboto-light {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.roboto-medium {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-/* Базові стилі для персонажа */
 .character-image {
   position: absolute;
   right: 0;
@@ -122,8 +107,7 @@ html {
   transition: all 0.3s ease;
 }
 
-/* Медіа-запит для мобільних пристроїв */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1030px) {
   .character-image {
     right: 50%;
     transform: translate(50%, -50%);
@@ -154,11 +138,9 @@ html {
 
   .social-buttons img {
     width: 35px;
-    height: 35px;
   }
 }
 
-/* Додаткові стилі для дуже маленьких екранів */
 @media screen and (max-width: 480px) {
   .character-image {
     height: 60vh;

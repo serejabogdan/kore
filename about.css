@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: white;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)) fixed,
+              url('./images/estate.png') center/cover fixed;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.section {
+  height: 100vh;
+  padding: 5rem 2rem 2rem;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.character-card {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.character-image {
+  width: 200px;
+  height: 300px;
+  background: #444;
+  border-radius: 4px;
+}
+
+.character-description {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.features-list {
+  list-style: none;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.features-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.features-list li:last-child {
+  margin-bottom: 0;
+}
+
+.features-list li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+}
+
+h1, h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.section-nav {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.section-nav a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+}
+
+.section-nav a:hover,
+.section-nav a.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+.story-text {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            height: 100vh;
+        }
+        
+        .container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+        
+        section {
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+        
+        #section1 { background: #f1c40f; }
+        #section2 { background: #e74c3c; }
+        #section3 { background: #3498db; }
+        #section4 { background: #2ecc71; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="section1">Секція 1</section>
+        <section id="section2">Секція 2</section>
+        <section id="section3">Секція 3</section>
+        <section id="section4">Секція 4</section>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+        let isScrolling = false;
+        let currentSection = 0;
+        const totalSections = document.querySelectorAll('section').length;
+
+        function scrollToSection(direction) {
+            if (isScrolling) return;
+
+            isScrolling = true;
+            
+            if (direction === 'down' && currentSection < totalSections - 1) {
+                currentSection++;
+            } else if (direction === 'up' && currentSection > 0) {
+                currentSection--;
+            }
+
+            const targetSection = document.querySelectorAll('section')[currentSection];
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+
+            setTimeout(() => {
+                isScrolling = false;
+            }, 250);
+        }
+
+        window.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            
+            if (e.deltaY > 0) {
+                scrollToSection('down');
+            } else {
+                scrollToSection('up');
+            }
+        }, { passive: false });
+    </script>
+</body>
+</html>

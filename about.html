@@ -5,44 +5,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт-візитка</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="utility.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body style="background-color: black;">
-    <div class="video-container">
-        <video autoplay muted loop playsinline class="background-video" poster="images/bg.png">
-            <source src="main_menu.webm" type="video/webm">
-            <source src="main_menu.mp4" type="video/mp4">
-            Ваш браузер не підтримує HTML5 відео.
-        </video>
-        <div class="overlay">
-            <img src="images/brand.png" width="1025" height="166" alt="Brand" class="logo">
-            <div class="about-link-wrapper">
-                <a href="/about-us" class="about-link roboto-medium">About us</a>
-            </div>
-            <div class="social-buttons">
-                <a href="https://instagram.com" target="_blank">
-                    <img src="images/instagram.png" alt="instagram">
-                </a>
-                <a href="https://steam.com" target="_blank">
-                    <img src="images/steam.png" alt="steam">
-                </a>
-                <a href="https://youtube.com" target="_blank">
-                    <img src="images/youtube.png" alt="youtube">
-                </a>
-                <a href="https://x.com" target="_blank">
-                    <img src="images/twitter-x.png" alt="twitter-x">
-                </a>
-                <a href="https://patreon.com" target="_blank">
-                    <img src="images/patreon.png" alt="patreon">
-                </a>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="kare" style="color: white; text-decoration: none">MAIN PAGE</a>
+            <a href="about.html" style="color: white; text-decoration: none">ABOUT US</a>
+        </nav>
+        <div style="color: white">🇬🇧 English</div>
+    </header>
+
+    <div class="section-nav">
+        <a href="#story" class="active"></a>
+        <a href="#fuko"></a>
+        <a href="#umina"></a>
+        <a href="#maid"></a>
+        <a href="#olivia"></a>
+        <a href="#features"></a>
+    </div>
+
+    <section id="story" class="section">
+        <div class="section-content">
+            <h2 style="border-radius: 12px; padding: 12px 32px; background-color: rgba(0,0,0,0.7);">Історія</h2>
+            <div class="story-text roboto-regular fs-6">
+                <p>Поринайте у захопливу пригоду з Наото, звичайним японським школярем, чиє життя перевертається після
+                    зради двох його найкращих друзів. Перенесений у загадковий інший світ, Наото вирушає в незабутню
+                    подорож, сповнену турботами, відкриття і нових можливостей.</p>
+                <br>
+                <p>Ваші рішення визначають шлях головного героя - кожен вибір може змінити хід сюжету, впливаючи на
+                    розвиток подій і взаємодію з персонажами. Візуальна новела з аніме-стилем та анімованими персонажами
+                    Live2D занурить вас в атмосферу напруженої, сумної та пригоди.</p>
+                <br>
+                <p>Розвивайтеся разом із Наото, долаючи як психологічні, так і фізичні випробування, щоб розкрити
+                    глибини цього унікального світу. Гра підходить для любителів аніме та візуальних новел, які цінують
+                    глибокі сюжети та можливість впливати на долю героїв.</p>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section id="fuko" class="section">
+        <div class="section-content">
+            <div class="character-card">
+                <img src="./images/characters/Fuko.png" width="336" height="665" alt="Fuko">
+                <div class="character-description">
+                    <p class="roboto-bold fs-6 text-center">Фуко — загадкова дівчина, яка раптово з'явилася в житті головного героя. Хто вона насправді —
+                        друг чи ворог? Чи зможе Наото розкрити її справжню сутність?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="umina" class="section">
+        <div class="section-content">
+            <div class="character-card">
+                <div class="character-description">
+                    <p class="roboto-bold fs-6 text-center">Умінa — талановита алхімік, знайомство з якою принесе нові випробування для головного героя. Що
+                        для неї важливіше — успіх чи почуття? Можливо, навіть вона сама щодо це не знає.</p>
+                </div>
+                <img src="./images/characters/Umina.png" width="336" height="665" alt="Umina">
+            </div>
+        </div>
+    </section>
+
+    <section id="maid" class="section">
+        <div class="section-content">
+            <div class="character-card">
+                <img src="./images/characters/Kara.png" width="336" height="665" alt="Kara">
+                <div class="character-description">
+                    <p class="roboto-bold fs-6 text-center">Покоївка, яка обожнює фліртувати з головним героєм і створювати пікантні ситуації. Але чи це її
+                        справжня сутність? Можливо, десь глибоко в душі Наото відкриє для себе іншу Кару?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="olivia" class="section">
+        <div class="section-content">
+            <div class="character-card">
+                <div class="character-description">
+                    <p class="roboto-bold fs-6 text-center">Сильна та войовнича, Олівія — справжній зразок жінки-лицаря, яка стоїть на варті правопорядку.
+                        Але яка вона насправді? Чи дійсно Олівія цінує тільки силу?</p>
+                </div>
+                <img src="./images/characters/Olivia.png" width="336" height="665" alt="Olivia">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="section">
+        <div class="section-content">
+            <h2 style="border-radius: 12px; padding: 12px 32px; background-color: rgba(0,0,0,0.7);">Особливості гри</h2>
+            <ul class="features-list roboto-medium fs-6">
+                <li>Потужний ігровий рушій RenPy для плавного геймплею</li>
+                <li>Яскраві персонажі з повною Live2D анімацією</li>
+                <li>Атмосферні анімовані фони</li>
+                <li>Розгалужений сюжет з понад 50 унікальними сценами</li>
+                <li>Ваші рішення формують розвиток історії</li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        const container = document.querySelector('.container');
+        const sectionIds = ['#story', "#fuko", "#umina", "#maid", "#olivia", "#features"];
+        const pageName = 'about.html';
+        let isScrolling = false;
+        const sectionId = sectionIds.indexOf(window.location.hash);
+        let currentSection = sectionId >= 0 ? sectionId : 0;
+        const sections = document.querySelectorAll('section');
+        const totalSections = sections.length;
+        const navLinks = document.querySelectorAll('.section-nav a');
+        updateActiveNav(navLinks[currentSection]);
+
+        function updateActiveNav(targetLink) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            targetLink.classList.add('active');
+        }
+
+        function scrollToSection(direction) {
+            if (isScrolling) return;
+
+            isScrolling = true;
+
+            if (direction === 'down' && currentSection < totalSections - 1) {
+                currentSection++;
+            } else if (direction === 'up' && currentSection > 0) {
+                currentSection--;
+            }
+            window.location.replace(`${pageName}${sectionIds[currentSection]}`);
+
+            const targetSection = document.querySelectorAll('section')[currentSection];
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+            updateActiveNav(navLinks[currentSection]);
+
+            setTimeout(() => {
+                isScrolling = false;
+            }, 250);
+        }
+        navLinks.forEach((link) => {
+            link.addEventListener('click', (e) => {
+
+                if (isScrolling) return;
+                isScrolling = true;
+                updateActiveNav(link);
+
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                currentSection = Array.from(sections).indexOf(targetSection);
+
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+
+                setTimeout(() => {
+                    isScrolling = false;
+                }, 250);
+            });
+        });
+
+        window.addEventListener('wheel', (e) => {
+            e.preventDefault();
+
+            if (e.deltaY > 0) {
+                scrollToSection('down');
+            } else {
+                scrollToSection('up');
+            }
+        }, { passive: false });
+    </script>
 </body>
 
 </html>
