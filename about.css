@@ -15,9 +15,9 @@ body {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   height: 100vh;
-  
+
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)) fixed,
-              url('./images/estate.png') center/cover fixed;
+    url('./images/estate.png') center/cover fixed;
 }
 
 .header {
@@ -100,7 +100,8 @@ body {
   left: 0;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin-bottom: 1.5rem;
   font-size: 2rem;
 }
@@ -138,4 +139,33 @@ h1, h2 {
   padding: 2rem;
   border-radius: 8px;
   backdrop-filter: blur(5px);
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    height: auto;
+  }
+
+  .section {
+    height: 100%;
+    width: 100%;
+    padding: 5rem 1rem 1rem;
+  }
+
+  .story-text {
+    padding: 1rem;
+  }
+
+  .character-card {
+    flex-direction: column;
+  }
+
+  .character-card img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .section-nav {
+    display: none;
+  }
 }

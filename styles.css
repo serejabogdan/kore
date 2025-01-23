@@ -96,6 +96,7 @@ html {
 .about-link-wrapper>a:hover {
   color: #cccccc;
   text-decoration: none;
+}
 
 .character-image {
   position: absolute;
